@@ -1,10 +1,8 @@
-
-#include <Windows.h>
+#include <windows.h>
 #include <iostream>
-
 uintptr_t process_base = 0;
 
-auto initialize()
+auto patch()
 {
 	AllocConsole();
 	SetConsoleTitleA("Cracked by space785");
@@ -25,7 +23,7 @@ auto initialize()
 		*(float*)(process_base + 0x01E1458) = 0.0f;
 		printf("> 0x01E1458\n");
 	}
-	__except(EXCEPTION_EXECUTE_HANDLER)
+	__except (EXCEPTION_EXECUTE_HANDLER)
 	{
 		printf("> EXCEPTION_EXECUTE_HANDLER = 0x%08lX\n", GetExceptionCode());
 	}
@@ -34,7 +32,8 @@ auto initialize()
 	return 1;
 }
 
-bool DllMain(void** hinstDLL, unsigned long fdwReason, void* lpReserved)
+bool DllMain(void** dll, unsigned long nigger, void* reserved)
 {
-	return initialize();
+	if (nigger == 1)
+		return patch();
 }

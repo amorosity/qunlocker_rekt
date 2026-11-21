@@ -1,0 +1,8 @@
+<Solution>
+  <Configurations>
+    <Platform Name="x64" />
+    <Platform Name="x86" />
+  </Configurations>
+  <Project Path="launcher/launcher.vcxproj" Id="fa5be3c6-dc1a-46b1-b9af-e83ce94b75e2" />
+  <Project Path="qunlocker_rekt/qunlocker_rekt.vcxproj" Id="579fd6f3-0c3b-48e6-9cfc-a51132ed5ca8" />
+</Solution>
